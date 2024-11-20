@@ -3,96 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Euphemia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #4facfe, #00f2fe);
-      color: #333;
-      text-align: center;
-      padding: 20px;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 5px solid #4facfe;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #4facfe;
-    }
-    p {
-      font-size: 1.1rem;
-      margin: 15px 0;
-      line-height: 1.6;
-    }
-    .skills {
-      margin: 20px 0;
-    }
-    .skills span {
-      display: inline-block;
-      background: #4facfe;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      margin: 5px;
-      font-size: 0.9rem;
-    }
-    .social-links a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #4facfe;
-      font-weight: bold;
-    }
-    .social-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
-  
+  <title>Welcome to My Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gradientStart: '#4facfe',
+            gradientEnd: '#00f2fe',
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <div class="container">
-    <img src="https://avatars.githubusercontent.com/u/103880289?v=4" alt="Profile Image" class="profile-img">
-    <h1>Hello World! 👋</h1>
-    <p>
-      💻 I am a Software Engineer Specialized in Frontend Development and Technical Writing. 
-      With a passion for creating intuitive user interfaces and crafting clear and concise technical documentation, 
-      I combine my technical writing skills with my ability to communicate complex concepts effectively.
+<body class="bg-gradient-to-b from-gradientStart to-gradientEnd text-gray-800 font-sans">
+
+  <!-- Main Container -->
+  <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg mt-10 text-center">
+    <!-- Profile Image -->
+    <img src="https://avatars.githubusercontent.com/u/103880289?v=4" alt="Profile Image" 
+      class="w-32 h-32 mx-auto rounded-full border-4 border-gradientStart shadow-lg mb-6">
+
+    <!-- Title -->
+    <h1 class="text-4xl font-bold text-gradientStart">Hello World! 👋</h1>
+    <p class="text-lg mt-4">
+      💻 I am a Software Engineer Specialized in Frontend Development and Technical Writing. With a passion for creating intuitive user interfaces and crafting clear and concise technical documentation, I combine my technical writing skills with my ability to communicate complex concepts effectively.
     </p>
-    <div class="skills">
-      <h2>My Expertise:</h2>
-      <span>HTML5</span>
-      <span>CSS3</span>
-      <span>JavaScript</span>
-      <span>React</span>
-      <span>Node.js</span>
-      <span>Visual Studio Code</span>
+
+    <!-- Skills -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-semibold text-gradientStart">My Expertise:</h2>
+      <div class="flex flex-wrap justify-center gap-2 mt-4">
+        <span class="bg-gradientStart text-white px-4 py-1 rounded-full">HTML5</span>
+        <span class="bg-gradientStart text-white px-4 py-1 rounded-full">CSS3</span>
+        <span class="bg-gradientStart text-white px-4 py-1 rounded-full">JavaScript</span>
+        <span class="bg-gradientStart text-white px-4 py-1 rounded-full">React</span>
+        <span class="bg-gradientStart text-white px-4 py-1 rounded-full">Node.js</span>
+        <span class="bg-gradientStart text-white px-4 py-1 rounded-full">Visual Studio Code</span>
+      </div>
     </div>
-    <div class="social-links">
-      <h2>You can find me on:</h2>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-      <a href="https://medium.com" target="_blank">Medium</a>
-      <a href="mailto:your-email@gmail.com">Gmail</a>
-      <a href="https://dev.to" target="_blank">Dev.to</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://twitter.com" target="_blank">Twitter</a>
+
+    <!-- Social Links -->
+    <div class="mt-8">
+      <h2 class="text-2xl font-semibold text-gradientStart">Find Me On:</h2>
+      <div class="grid grid-cols-3 gap-2 mt-4">
+        <a href="https://linkedin.com" target="_blank" 
+          class="text-gradientStart hover:underline" title="LinkedIn">LinkedIn</a>
+        <a href="https://medium.com" target="_blank" 
+          class="text-gradientStart hover:underline" title="Medium">Medium</a>
+        <a href="mailto:your-email@gmail.com" 
+          class="text-gradientStart hover:underline" title="Gmail">Gmail</a>
+        <a href="https://dev.to" target="_blank" 
+          class="text-gradientStart hover:underline" title="Dev.to">Dev.to</a>
+        <a href="https://instagram.com" target="_blank" 
+          class="text-gradientStart hover:underline" title="Instagram">Instagram</a>
+        <a href="https://twitter.com" target="_blank" 
+          class="text-gradientStart hover:underline" title="Twitter">Twitter</a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="mt-12">
+      <h2 class="text-2xl font-semibold text-gradientStart">Contact Me</h2>
+      <form class="mt-6 max-w-md mx-auto">
+        <div class="mb-4">
+          <label for="name" class="block text-left text-sm font-medium text-gray-600">Name</label>
+          <input type="text" id="name" placeholder="Your Name" 
+            class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-gradientStart">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-left text-sm font-medium text-gray-600">Email</label>
+          <input type="email" id="email" placeholder="Your Email" 
+            class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-gradientStart">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-left text-sm font-medium text-gray-600">Message</label>
+          <textarea id="message" rows="4" placeholder="Your Message" 
+            class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-gradientStart"></textarea>
+        </div>
+        <button type="submit" 
+          class="w-full bg-gradientStart text-white py-2 px-4 rounded-lg hover:bg-gradientEnd transition">
+          Send Message
+        </button>
+      </form>
     </div>
   </div>
+
 </body>
 </html>
